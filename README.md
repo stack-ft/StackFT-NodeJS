@@ -64,7 +64,7 @@ Here's an example of how to use the **Bill Pay** service:
     })
 ```
 
-Remember to replace `params` with the actual details of the bill.
+Remember to replace `params` with the actual details of the bill. More Examples can be found [here](https://github.com/stack-ft/StackFT-NodeJS/blob/main/Tests/test.js)
 
 
 ## Documentation
