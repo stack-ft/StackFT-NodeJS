@@ -6,15 +6,10 @@ The Stack NodeJS SDK provides an easy and convenient way to communicate with the
 
 The SDK includes the following services:
 
-- **Bill Pay**: Simplify your bill payments with this service.
-- **Entity**: Manage entities with ease.
-- **Facial Recognition**: Implement facial recognition and liveness detection in your applications.
-- **Identity**: Handle identity verification and management securely.
-- **Ledgers**: Maintain and manage ledgers effectively.
-- **Rewards**: Manage reward systems in your application.
-- **Transactions**: Handle transactions smoothly and securely.
 - **Utilities**: A set of utility services.
-- **Web3**: Integrate with blockchain technologies.
+  - **Banking**: A set of banking related apis
+  - **Currency**: A set of currency related apis
+  - **Stock**: A set of stock market related apis
 
 ## Installation
 
@@ -48,23 +43,25 @@ const stack = new Stack({ apiKey: 'your-api-key', baseURL: 'your-custom-url' });
 
 ## Example
 
-Here's an example of how to use the **Bill Pay** service:
+Here's an example of how to use the **Currency Conversion** service:
 
 ```js
-    const params = {
-        "request_id": "f49cad8a-ca23-4dca-b337-3e15c152e415",
-        "amount": 20
-    }
-    stack.bill.phone.pay(params)
-    .then(result => {
-        console.log(result)
-    })
-    .catch(error => {
-        console.log(error)
-    })
+const params = {
+  "from": "USD",
+  "to": "KES",
+  "amount": 100
+}
+
+stack.utilities.currency.convert(params)
+.then(result => {
+    console.log(result)
+})
+.catch(error => {
+    console.log(error)
+})
 ```
 
-Remember to replace `params` with the actual details of the bill. More Examples can be found [here](https://github.com/stack-ft/StackFT-NodeJS/blob/main/Tests/test.js)
+Remember to replace `params` with the actual details of the request. More Examples can be found [here](https://github.com/stack-ft/StackFT-NodeJS/blob/main/Tests/test.js)
 
 
 ## Documentation
@@ -73,7 +70,7 @@ The full API documentation, including detailed descriptions of each service and 
 
 ## Status codes
 
-For a full list of status codes and error types, please refer to the documentation [here](https://docs.stack-ft.com/status-codes.html). 
+For a full list of status codes and error types, please refer to the documentation [here](https://docs.stack-ft.com/errors#status-codes). 
 
 ## Support
 
