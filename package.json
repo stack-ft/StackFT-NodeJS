@@ -1,6 +1,6 @@
 {
   "name": "stackft",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "A Nodejs client library for the Stack API",
   "main": "index.js",
   "repository": "https://github.com/stack-ft/StackFT-NodeJS",
